@@ -59,7 +59,7 @@ public class MMSCModel {
             d += C.fact[m] / (C.fact[(m - i)] * C.fact[i]) * Math.pow(lamda / mu, i);
         }
         for (int j = S; j <= m; j++) {
-            d += C.fact[m] / (C.fact[(m - j)] * C.fact[j]) * (Math.pow(lamda / mu, j) / (C.fact[S] * Math.pow(S, j - S)));
+            d += C.fact[m] / (C.fact[(m - j)] * C.fact[S] * Math.pow(S, j - S)) * (Math.pow(lamda / mu, j));
         }
         return 1.0D / d;
     }
